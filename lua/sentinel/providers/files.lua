@@ -38,11 +38,9 @@ end
 
 require'sentinel.common'.register_provider {
     layout = {
-        { type = "group", val = find(input) }
+        { type = "group", val = function () return find(input) end }
     },
-    req = {
-        name = 'files',
-    },
+    name = 'files',
     opts = {
         previewer = nil,
         sorter = nil,

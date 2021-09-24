@@ -2,6 +2,7 @@ local M = {}
 
 local ui = require('gamma-ui')
 require('sentinel.common')
+-- register providers
 require('sentinel.providers.files')
 
 function M.start(opts)
@@ -31,7 +32,7 @@ function M.provider(name)
 end
 
 function M.setup()
-    vim.cmd[[ 
+    vim.cmd[[
         command! -nargs=1 Sentinel call luaeval("require'sentinel'.provider(_A)", expand('<args>'))
     ]]
 end
