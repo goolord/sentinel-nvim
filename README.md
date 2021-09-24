@@ -1,0 +1,2 @@
+#sentinal-nvim
+fuzzy finder
